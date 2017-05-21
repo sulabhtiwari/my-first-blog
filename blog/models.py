@@ -4,8 +4,8 @@ from django.db import models
 from django.utils import timezone
 
 # Create your models here.
-class Post(models.Model):#this is our model
-	author=models.ForeignKey('auth.User')
+class Post(models.Model):#this is our model, models.Model tells to save Post object in database
+	author=models.ForeignKey('auth.User')#
 	title=models.CharField(max_length=200)
 	text=models.TextField()
 	created_date=models.DateTimeField(default=timezone.now)
